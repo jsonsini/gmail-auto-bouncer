@@ -1,0 +1,48 @@
+{
+  "credentials_file": "/home/john/scripts/gmail_auto_bouncer_credentials.json",
+  "default_prefix": "This message has been returned to the sender without the recipient having a chance to read it before deletion.  All future messages will be handled similarly.",
+  "delete_delay": 10,
+  "logging_config": {
+    "version": 1,
+    "formatters": {
+      "default": {
+        "format": "[%(asctime)s.%(msecs)03d] %(levelname)-8s %(module)s.py %(lineno)-4d %(processName)-30s - %(message)s",
+        "datefmt": "%Y-%m-%d %H:%M:%S"
+      }
+    },
+    "handlers": {
+      "stdout_handler": {
+        "class": "logging.StreamHandler",
+        "formatter": "default",
+        "stream": "ext://sys.stdout"
+      },
+      "file_handler": {
+        "class": "logging.FileHandler",
+        "formatter": "default",
+        "filename": "gmail-auto-bouncer.log"
+      }
+    },
+    "loggers": {
+      "gmail_auto_bouncer": {
+        "level": "INFO",
+        "handlers": [
+          "stdout_handler",
+          "file_handler"
+        ]
+      }
+    }
+  },
+  "pool_size": 20,
+  "reply_mapping": {
+    "John Sonsini <JohnSonsini@hotmail.com>": {
+      "keep_reply": true,
+      "multiple": 2,
+      "prefix": "my super special prefix",
+      "to": "johnsonsini@hotmail.com"
+    }
+  },
+  "scopes": [
+    "https://mail.google.com/"
+  ],
+  "token_file": "/home/john/scripts/gmail_auto_bouncer_token.json"
+}
