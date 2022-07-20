@@ -59,7 +59,7 @@ to | Address to send reply to in case sender cannot receive incoming messages
 18. Select "OK" to close the dialog
 
 ### Known Limitations
-With a personal (non Google Workspace) account the gmail_auto_bouncer_credentials.json file downloaded from the OAuth consent screen is only valid for seven days as documented here:  [https://developers.google.com/identity/protocols/oauth2#expiration](https://developers.google.com/identity/protocols/oauth2#expiration) so steps 15 to 18 will need to be repeated to update the related authorization code.  Users can choose to publish their application by selecting "PUBLISH APP" from the OAUth consent screen configuration referenced in step 6 above to remove this limitation, the criteria to verify the application are listed below:
+With a personal (non Google Workspace) account the gmail_auto_bouncer_credentials.json file downloaded from the OAuth consent screen is only valid for seven days as documented here:  [https://developers.google.com/identity/protocols/oauth2#expiration](https://developers.google.com/identity/protocols/oauth2#expiration) so steps 15 to 18 will need to be repeated to update the related authorization code.  Users can choose to publish their application by selecting "PUBLISH APP" from the OAuth consent screen configuration referenced in step 6 above to remove this limitation, the criteria to verify the application are listed below:
 
 The OAuth consent screen has a "PUBLISH APP" button that requires:
  * An official link to your app's Privacy Policy
